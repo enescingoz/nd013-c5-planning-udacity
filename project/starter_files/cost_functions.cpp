@@ -54,7 +54,7 @@ double collision_circles_cost_spiral(const std::vector<PathPoint>& spiral,
       // is NOT complete. HINT: use CIRCLE_OFFSETS[c], sine and cosine to
       // calculate x and y: cur_y + CIRCLE_OFFSETS[c] * std::sin/cos(cur_yaw)
       auto circle_center_x = cur_x + CIRCLE_OFFSETS[c] * std::cos(cur_yaw);  // <- Update 
-      auto circle_center_y = cur_y + CIRCLE_OFFSETS[c] * std::cos(cur_yaw);  // <- Update 
+      auto circle_center_y = cur_y + CIRCLE_OFFSETS[c] * std::sin(cur_yaw);  // <- Update 
 
       for (auto obst : obstacles) {
         if (collision) {
